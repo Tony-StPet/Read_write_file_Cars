@@ -20,7 +20,7 @@ public class Car {
 //        System.out.println(this+" шумит и рычит:: "+ mark);
 //    }
 
-    //    @Override - почему? не работает
+    //    @Override - почему? не работает - потому что это впервые и переопределение не требуется
     public String sound() {
         return "шумит и рычит::";
     }
