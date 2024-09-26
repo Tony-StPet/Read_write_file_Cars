@@ -16,8 +16,13 @@ public class Car {
         return "Car{" +"mark=' "+mark + '\'' + ", color=' " +color +'\'' + ", tipyOfback=' "+tipyOfback+'\''+"}";
     }
 
-    protected void makeNoise(){
-        System.out.println(this+" шумит и рычит:: "+ mark);
+//    protected void makeNoise(){
+//        System.out.println(this+" шумит и рычит:: "+ mark);
+//    }
+
+    //    @Override - почему? не работает
+    public String sound() {
+        return "шумит и рычит::";
     }
 }
 
