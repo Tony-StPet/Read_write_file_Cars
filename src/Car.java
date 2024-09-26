@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
-
+// создание класса машина, метода в строку и миетода машина издает звук
 public class Car {
     String mark;
     String color;

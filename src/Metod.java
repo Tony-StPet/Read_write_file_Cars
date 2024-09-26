@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+// создание библиотеки методав работы с файлом записи и чтения
 public class Metod {
     public static List<Car> makeCars(){
         List<Car> carList = new ArrayList<>();
@@ -15,17 +16,20 @@ public class Metod {
         return carList;
     }
 
-
+// запись в файл
     public static void writeCarsFile(List<Car> cars, String filename){
-        //в первой строке файла пусть будет количество треугольников
-        //в каждой следующей строке файла пусть будут 3 числа, разделенные пробелами - строны очередного треугольбника
+        //в первой строке файла пусть будет количество машин
+        //в каждой следующей строке файла пусть будут 3 слова, разделенные пробелами - характеристики машины
 
         try{
             FileWriter fileWriter = new FileWriter(filename);
-//            fileWriter.write(String.valueOf(cars.size()));
+            // первая строка - количество
+            fileWriter.write(String.valueOf(cars.size()));
+            //запись на каждую строку экземпляра класса
             for (Car crr: cars){
                 fileWriter.write(crr.mark+" "+ crr.color+" "+ crr.tipyOfback);
             }
+            // закрытие файла -
             fileWriter.close();
         }
         catch (IOException e) {
@@ -34,18 +38,19 @@ public class Metod {
         }
     }
 
+    // вывод в консоль
     public static void printCars(List<Car> cars){
         for (Car crr: cars)
             System.out.println(crr);
     }
 
-
+// чтение файла и вывод в консоль
     public static List<Car> readCars(String fname){
         List<Car> carList = new ArrayList<>();
         try{
             Scanner scanner = new Scanner(new File(fname));
-            //int k = scanner.nextInt();
-            while (scanner.hasNext()) {
+            //int k = scanner.nextInt(); - убрал количество в первой строке файла
+            while (scanner.hasNext()) { // изменил фор на вайл
                 String a = scanner.next();
                 String b = scanner.next();
                 String c = scanner.next();
