@@ -13,7 +13,7 @@ public class Car {
     }
     @Override
     public String toString() {
-        return "\n Car{" +"mark=' "+mark + '\'' + ", color=' " +color +'\'' + ", tipyOfback=' "+tipyOfback+'\''+"}";
+        return "Car{" +"mark=' "+mark + '\'' + ", color=' " +color +'\'' + ", tipyOfback=' "+tipyOfback+'\''+"}";
     }
 
     protected void makeNoise(){

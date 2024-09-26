@@ -16,11 +16,11 @@ public class Main {
 
     private static void writeToFile() {
         List<Car> cars = Metod.makeCars();
-        Metod.printTriangles(cars);
+        Metod.printCars(cars);
         Metod.writeCarsFile(cars, "output.txt");
     }
 
     private static void ReadFile() {
         List<Car> cars = Metod.readCars("output.txt");
-        Metod.printTriangles(cars);}
+        Metod.printCars(cars);}
     }

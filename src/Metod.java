@@ -24,7 +24,7 @@ public class Metod {
             FileWriter fileWriter = new FileWriter(filename);
 //            fileWriter.write(String.valueOf(cars.size()));
             for (Car crr: cars){
-                fileWriter.write("\n"+crr.mark+" "+ crr.color+" "+ crr.tipyOfback);
+                fileWriter.write(crr.mark+" "+ crr.color+" "+ crr.tipyOfback);
             }
             fileWriter.close();
         }
@@ -34,9 +34,9 @@ public class Metod {
         }
     }
 
-    public static void printTriangles(List<Car> cars){
-        for (Car trr: cars)
-            System.out.println(trr);
+    public static void printCars(List<Car> cars){
+        for (Car crr: cars)
+            System.out.println(crr);
     }
 
 
